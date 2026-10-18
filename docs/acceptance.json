@@ -1,0 +1,68 @@
+{
+  "testedAt": "2026-10-16T01:39:32.116Z",
+  "engine": "Headless Chrome, virtual audio output, emulated touch/viewport; not physical devices",
+  "results": [
+    {
+      "name": "Dragging and zoom change the actual camera",
+      "status": "PASS"
+    },
+    {
+      "name": "Opening title leaves before the first sentence appears",
+      "status": "PASS"
+    },
+    {
+      "name": "Default journey waits for the reader; continue advances once",
+      "status": "PASS"
+    },
+    {
+      "name": "Gesture starts local music; pause stops media time",
+      "status": "PASS"
+    },
+    {
+      "name": "Optional automatic journey still works",
+      "status": "PASS"
+    },
+    {
+      "name": "Interrupted hold cancels; sustained hold releases the star and opens the full letter",
+      "status": "PASS"
+    },
+    {
+      "name": "Entire letter stays, scrolls to signature, and only continues on request",
+      "status": "PASS"
+    },
+    {
+      "name": "Living starfield and all twelve blessings work",
+      "status": "PASS"
+    },
+    {
+      "name": "small: text, complete letter touch scrolling, star spacing and touch",
+      "status": "PASS",
+      "detail": "320×568"
+    },
+    {
+      "name": "phone: text, complete letter touch scrolling, star spacing and touch",
+      "status": "PASS",
+      "detail": "390×844"
+    },
+    {
+      "name": "landscape: text, complete letter touch scrolling, star spacing and touch",
+      "status": "PASS",
+      "detail": "844×390"
+    },
+    {
+      "name": "ipad: text, complete letter touch scrolling, star spacing and touch",
+      "status": "PASS",
+      "detail": "1024×768"
+    },
+    {
+      "name": "ipad-wide: text, complete letter touch scrolling, star spacing and touch",
+      "status": "PASS",
+      "detail": "1180×820"
+    },
+    {
+      "name": "No browser runtime errors",
+      "status": "PASS"
+    }
+  ],
+  "errors": []
+}

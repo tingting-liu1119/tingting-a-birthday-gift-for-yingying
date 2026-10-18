@@ -1,0 +1,16 @@
+{
+  "testedAt": "2026-10-17T15:34:19.520Z",
+  "engine": "Headless Chrome; emulated touch and viewports, not physical devices",
+  "results": [
+    "Hold → ascending star → stardust opens continuously; full text waits while the galaxy moves",
+    "Reading to the signature and returning to the journey works",
+    "small 320×568: complete copy, bounds, touch scrolling and exit",
+    "phone 390×844: complete copy, bounds, touch scrolling and exit",
+    "landscape 844×390: complete copy, bounds, touch scrolling and exit",
+    "ipad 1024×768: complete copy, bounds, touch scrolling and exit",
+    "ipad-wide 1180×820: complete copy, bounds, touch scrolling and exit",
+    "No WebGL + reduced motion: full blessing and keyboard exit remain available",
+    "No browser runtime or console errors"
+  ],
+  "errors": []
+}

@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#020203">
+  <meta name="description" content="致莹莹酱的十九岁。一部由婷婷酱送出的互动宇宙电影。">
+  <title>飘向宇宙尽头 · 致莹莹酱的十九岁</title>
+  <link rel="icon" type="image/svg+xml" href="assets/star.svg">
+  <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+  <main id="experience" aria-label="飘向宇宙尽头，互动生日电影">
+    <canvas id="universe" aria-hidden="true"></canvas>
+    <div id="fallback" aria-hidden="true"></div>
+    <div class="vignette" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+    <div id="gesture-plane" aria-hidden="true"></div>
+    <header class="masthead">
+      <a class="wordmark" href="#" aria-label="返回序幕"><span class="tiny-star">✧</span> <span>宇宙来信</span></a>
+      <span class="dedication">FOR YINGYING <i>·</i> 19</span>
+      <span class="date">2026.12.04</span>
+    </header>
+
+    <section id="landing" class="landing">
+      <p class="eyebrow">A JOURNEY THROUGH THE STARS</p>
+      <h1><span>飘向</span><span>宇宙尽头</span></h1>
+      <p class="subtitle">致莹莹酱的十九岁。</p>
+      <button id="enter" class="enter" type="button"><span class="enter-star" aria-hidden="true">✧</span><span>进入宇宙</span><span class="enter-arrow" aria-hidden="true">↗</span></button>
+      <p class="listening"><span aria-hidden="true">♫</span> 戴上耳机，让世界安静一会儿</p>
+      <p class="touch-invitation">轻轻拖动，星河会回应你</p>
+      <p class="loading-note" id="load-note" role="status"></p>
+    </section>
+    <footer id="landing-footer" class="landing-footer"><span>3016 DAYS OF KNOWING YOU</span><span>一份来自婷婷酱的生日礼物</span><span>01 / ∞</span></footer>
+
+    <section id="film" class="film" hidden aria-label="电影字幕">
+      <div class="scene-caption"><span id="scene-index"></span><span class="caption-line"></span><span id="scene-name"></span></div>
+      <div id="memory-frame" aria-hidden="true"><div class="frame-inner"><span class="memory-dust"></span></div><span class="frame-date">那些没有被记录的瞬间</span></div>
+      <div id="nineteen" aria-hidden="true">19</div>
+      <article id="letter-sheet" aria-label="星光里的完整生日祝福" aria-hidden="true" inert>
+        <div id="letter-scroll" tabindex="0" aria-label="星光里的祝福，可向下阅读">
+          <div class="starlight-crown" aria-hidden="true">
+            <svg viewBox="0 0 280 76" fill="none"><path d="M20 48 72 36 140 24 188 45 249 30M72 36 91 62M188 45 220 65"/><circle cx="20" cy="48" r="1"/><circle cx="72" cy="36" r="1.7"/><circle cx="91" cy="62" r=".8"/><circle cx="188" cy="45" r="1.3"/><circle cx="249" cy="30" r=".9"/><circle cx="220" cy="65" r=".8"/></svg>
+            <span class="starlight-source"></span>
+          </div>
+          <p class="letter-date">2026 年 12 月 4 日</p>
+          <h2>写给十九岁的你</h2><div id="letter-body"></div>
+          <button id="keep-letter" type="button">收下这片星光，继续漫游 <span aria-hidden="true">↗</span></button>
+        </div>
+        <span class="letter-scroll-hint" aria-hidden="true">向下读，时间会等你 ↓</span>
+      </article>
+      <div id="ritual-action" hidden>
+        <button id="blow-candle" type="button"><span aria-hidden="true">✧</span> 准备吹蜡烛</button>
+        <p id="breath-status" role="status">许一个愿望，再轻轻吹一口气。</p>
+        <div id="breath-meter" role="progressbar" aria-label="吹气进度" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><i></i></div>
+        <button id="hold-breath" type="button">不便出声？长按这里吹灭星烛</button>
+        <span class="mic-note">仅在这次吹气时使用麦克风，不录音、不上传</span>
+      </div>
+      <div id="fallback-cake" aria-hidden="true"><img src="assets/particle-cake.svg" alt=""><span id="fallback-candle">✧</span></div>
+      <div id="subtitle-wrap" class="subtitle-wrap"><p id="subtitle" aria-live="off"></p></div>
+      <span class="paused-indicator" id="paused-indicator" hidden>时间，暂时停在这里</span>
+      <button id="next-moment" type="button" hidden>继续向前 <span aria-hidden="true">↗</span></button>
+    </section>
+
+    <section id="explore" class="explore" hidden aria-label="自由探索十二颗祝福星星">
+      <div class="explore-heading"><p class="eyebrow">A UNIVERSE, JUST FOR YOU</p><h2>送你一整片星空</h2><p>点击星星，收下属于你的祝福。</p></div>
+      <div id="blessing-stars"></div>
+      <div class="explore-footer"><span id="collected">已点亮 0 颗星星</span><span>不必找齐，星光一直都在。</span></div>
+    </section>
+
+    <nav id="controls" class="controls" hidden aria-label="观影控制">
+      <button id="play-pause" class="icon-button" type="button" aria-label="暂停电影"><svg viewBox="0 0 24 24" aria-hidden="true"><path id="play-shape" d="M9 6v12M15 6v12"/></svg></button>
+      <button id="chapters-button" class="chapter-button" type="button" aria-expanded="false" aria-controls="chapters"><span id="control-scene">序幕</span><span aria-hidden="true">⌃</span></button>
+      <input id="seek" type="range" min="0" max="100" value="0" step="0.1" aria-label="电影进度">
+      <span id="time-label" class="time-label">00:00</span>
+      <button id="mute" class="icon-button" type="button" aria-label="静音" aria-pressed="false"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 10h4l5-4v12l-5-4H4z"/><path id="sound-waves" d="M17 9a5 5 0 0 1 0 6M20 6a9 9 0 0 1 0 12"/></svg></button>
+      <button id="replay" class="icon-button" type="button" aria-label="重新观看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 9a8 8 0 1 1-1 6M5 4v5h5"/></svg></button>
+      <button id="fullscreen" class="icon-button" type="button" aria-label="全屏观看"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9V4h5M15 4h5v5M20 15v5h-5M9 20H4v-5"/></svg></button>
+      <button id="motion-toggle" class="motion-toggle" type="button" hidden aria-pressed="false">开启星海流动</button>
+      <button id="auto-play" class="auto-play" type="button" aria-pressed="false">自动漫游</button>
+    </nav>
+    <div id="chapters" class="chapters" hidden role="dialog" aria-label="选择章节"><p>把时间，停在喜欢的地方</p><div id="chapter-list"></div></div>
+    <div id="toast" class="toast" role="status" hidden></div>
+    <button id="audio-retry" class="audio-retry" type="button" hidden>轻触开启音乐</button>
+    <div id="space-navigation"><span>拖动星河 · 双指靠近</span><button id="closer" type="button" aria-label="靠近银河">＋</button><button id="farther" type="button" aria-label="退远看银河">−</button><button id="reset-view" type="button">回到此刻</button></div>
+
+    <dialog id="blessing-dialog" class="blessing-dialog" aria-labelledby="blessing-title" aria-describedby="blessing-text">
+      <button id="close-blessing" class="close-blessing" aria-label="关闭祝福，回到星空" type="button">×</button>
+      <p id="star-number" class="eyebrow"></p><div class="dialog-star" aria-hidden="true">✧</div>
+      <h2 id="blessing-title"></h2><p id="blessing-text"></p>
+      <button id="return-stars" class="return-stars" type="button">收下这束星光 <span aria-hidden="true">↗</span></button>
+    </dialog>
+    <noscript><div class="noscript"><h1>致莹莹酱的十九岁</h1><p>请开启 JavaScript，进入属于你的星空。</p><a href="letter.html">也可以在这里阅读完整的信与祝福</a></div></noscript>
+  </main>
+  <script type="module" src="src/main.js"></script>
+</body>
+</html>

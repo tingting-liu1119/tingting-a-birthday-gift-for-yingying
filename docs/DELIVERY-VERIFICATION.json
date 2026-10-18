@@ -1,0 +1,36 @@
+{
+  "deliveryDate": "2026-10-18",
+  "timeZone": "Asia/Shanghai",
+  "version": "1.2.1",
+  "node": "v24.19.0",
+  "syntaxChecks": [
+    "src/main.js",
+    "src/universe.js",
+    "src/audio.js",
+    "src/breath.js"
+  ],
+  "tests": {
+    "status": "PASS",
+    "output": "✔ all approved words remain, including the complete letter and twelve blessings (2.695125ms)\n✔ every stage is continuous and the main quote keeps its reading time (0.156458ms)\n✔ manual journey waits, auto mode progresses, cake and full letter never auto-skip (0.266208ms)\n✔ breath requires sustained broadband input, not a short transient or steady tone (0.4325ms)\n✔ silent microphone remains finite and cannot trigger the candle (0.726583ms)\nℹ tests 5\nℹ suites 0\nℹ pass 5\nℹ fail 0\nℹ cancelled 0\nℹ skipped 0\nℹ todo 0\nℹ duration_ms 89.892"
+  },
+  "build": {
+    "status": "PASS",
+    "output": "Generated fallback galaxy and full accessible letter.\nBuilt dist/ — dependency-free static site, all resource paths relative.",
+    "isolatedDirectory": true,
+    "thirdPartyDependenciesInstalled": false,
+    "prebuiltOutputMatchesRebuild": true
+  },
+  "archivePolicy": {
+    "selection": "Explicit source/resource/configuration allowlist plus prebuilt dist",
+    "excluded": [
+      "node_modules",
+      ".git",
+      "cache directories",
+      ".env files",
+      "private-key files",
+      "previous archives"
+    ],
+    "credentialPatternScan": "PASS"
+  },
+  "scope": "Build and package verification only; prior browser results and real-device limits are documented in TESTING.md."
+}

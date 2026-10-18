@@ -1,0 +1,9 @@
+{
+  "testedAt": "2026-10-16T01:41:54.693Z",
+  "method": "Virtual microphone with local synthetic noise; no physical microphone accessed",
+  "checks": [
+    "No microphone before gesture; synthetic broadband breath triggers release; stream stops immediately",
+    "Cancel listening stops every microphone track without releasing the candle",
+    "Denied permission offers a working hold-to-blow fallback"
+  ]
+}

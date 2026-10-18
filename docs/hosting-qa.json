@@ -1,0 +1,11 @@
+{
+  "testedAt": "2026-10-16T01:44:57.483Z",
+  "base": "http://127.0.0.1:4173/dist/",
+  "results": [
+    "Built subdirectory, refresh, local resources and audio Range requests work",
+    "Reduced motion stays still until explicit opt-in",
+    "No WebGL: cake, hold gesture, full letter, exploration and keyboard focus work",
+    "No JavaScript: full text is readable"
+  ],
+  "errors": []
+}
