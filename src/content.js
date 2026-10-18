@@ -69,7 +69,7 @@ export const blessings = [
   ['藏起来的特别祝福', '无论下一次见面是什么时候，\n无论未来我们各自走向哪里，\n我都希望你过得很好。\n\n不是因为今天是你的生日。\n而是因为，那个人是你。'],
 ];
 
-export const MUSIC = { src: 'assets/audio/pxyz.m4a', duration: 179.364, loopStart: 12, crossfade: 4 };
+export const MUSIC = { src: 'assets/audio/pxyz.m4a', duration: 179.364 };
 // 原始音频响度分析结果见 docs/audio-analysis.json。阅读时间不受歌曲长度压缩。
 export function readingSeconds(text, scene = '') {
   const count = [...text].filter(c => !/\s/.test(c)).length;
